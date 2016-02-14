@@ -18,4 +18,4 @@ How it works
 
 Known problems
 ==============
-If something hangs, type `killall omxplayer.bin`.
+If the player hangs (if you close the restserver while omxplayer is still running, for example), type `killall omxplayer.bin`.

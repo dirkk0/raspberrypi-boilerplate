@@ -34,7 +34,7 @@ class Runner:
             print self.process.pid
             self.process.stdin.write('q')
             # os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
-            os.kill(self.process.pid, signal.SIGTERM) 
+            # os.kill(self.process.pid, signal.SIGTERM) 
             self.process = None
 
 if __name__ == '__main__':
