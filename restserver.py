@@ -16,7 +16,9 @@ from flask_restful import Resource, Api
 # either this if you have another webserver
 # app = Flask(__name__)
 
-# or this to serve static files.
+# according to the Flask people (Flaskians?)  this should rather be another
+# server instance on another port, but for this one file this will do.
+# this is to serve static files:
 app = Flask(__name__, static_folder='static', static_url_path='')
 
 api = Api(app)
