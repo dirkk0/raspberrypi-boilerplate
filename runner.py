@@ -33,8 +33,10 @@ class Runner:
     def stop(self):
         print self.process.pid
         if self.process:
-            # os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
-            os.kill(self.process.pid, signal.SIGTERM) 
+            ## on raspberrypi
+            os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
+            ## on ubuntu
+            # os.kill(self.process.pid, signal.SIGTERM) 
             self.process = None
 
 if __name__ == '__main__':

@@ -1,6 +1,4 @@
 
-
-
 import urllib2
 
 import runner
@@ -59,4 +57,4 @@ api.add_resource(Title, '/title/<string:radio_id>')
 api.add_resource(Stop, '/radio/stop')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
