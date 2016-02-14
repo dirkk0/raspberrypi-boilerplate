@@ -13,9 +13,9 @@ class Runner:
     def __init__(self):
         self.process = None
         ## on ubuntu, install vlc
-        self.player = 'cvlc'
+        # self.player = 'cvlc'
         ## on raspberrypi, omxplayer is already installed
-        # self.player = 'omxplayer'
+        self.player = 'omxplayer'
 
 
     def run(self, cmd):
