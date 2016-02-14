@@ -30,11 +30,6 @@ class Radio(Resource):
         resp.headers.extend({'X-Powered-By': 'AT-5000'})
         return resp
 
-    # def put(self, radio_id):
-    #     todos[radio_id] = request.form['data']
-    #     return {radio_id: radios[radio_id]}
-
-
 def getStation(url):
     req = urllib2.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' })
     html = urllib2.urlopen(req).read()
