@@ -1,7 +1,10 @@
+Installation
+============
 
+Install flask-restful (this also installs flask)
+`pip install flask-restful`
 
-Install flask-restful (this also install flask)
+Run with `python reststerver.py`.
 
-pip install flask-restful
 
 
