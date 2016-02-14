@@ -30,9 +30,9 @@ class Runner:
         self.run(cmd)
 
     def stop(self):
-        print self.process.pid
-        self.process.stdin.write('q')
         if self.process:
+            print self.process.pid
+            self.process.stdin.write('q')
             # os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
             os.kill(self.process.pid, signal.SIGTERM) 
             self.process = None
