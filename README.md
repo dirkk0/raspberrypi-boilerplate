@@ -2,9 +2,11 @@ Installation
 ============
 
 Either clone this repo or download the zip:
-`wget https://github.com/dirkk0/raspberrypi-boilerplate/archive/master.zip
-`unzip master.zip`
-`cd rasperberrypi-boilerplate-master`
+
+    wget https://github.com/dirkk0/raspberrypi-boilerplate/archive/master.zip
+    unzip master.zip
+    cd rasperberrypi-boilerplate-master
+
 
 Install flask-restful (this also installs flask):
 `sudo pip install flask-restful`
