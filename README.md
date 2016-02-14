@@ -17,6 +17,8 @@ To run in background use screen:
 
 `screen -S server -L -dm bash -c "python restserver.py"`
 
+You should now be able to start a stream with `curl http://pi:5000/radio/1` and `curl http://pi:5000/radio/stop` should stop the stream (replace 'pi' with name or IP of your pi)
+
 How it works
 ============
 
