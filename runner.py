@@ -1,4 +1,3 @@
-# runner.py
 
 import subprocess
 import shlex
@@ -32,11 +31,10 @@ class Runner:
 
     def stop(self):
         print self.process.pid
+        self.process.stdin.write('q')
         if self.process:
-            ## on raspberrypi
-            os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
-            ## on ubuntu
-            # os.kill(self.process.pid, signal.SIGTERM) 
+            # os.killpg(os.getpgid(self.process.pid), signal.SIGTERM) 
+            os.kill(self.process.pid, signal.SIGTERM) 
             self.process = None
 
 if __name__ == '__main__':
@@ -45,5 +43,8 @@ if __name__ == '__main__':
     # filename = "test.mp3"
     filename = "http://205.164.62.20:8206"
     r.play(filename)
-    time.sleep(1)
+    time.sleep(2)
+    r.stop()
+    r.play(filename)
+    time.sleep(2)
     r.stop()
